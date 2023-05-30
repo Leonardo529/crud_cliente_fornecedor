@@ -1,0 +1,62 @@
+{
+  "client": [
+    {
+      "id": 1,
+      "name": "Lauren García",
+      "genero": "Feminino",
+      "idade": "22",
+      "telefone": "14974658990",
+      "email": "laurengarcia@gmail.com",
+      "regiao": "Sul"
+    },
+    {
+      "id": 2,
+      "name": "Carlos Aguíar",
+      "genero": "Masculino",
+      "idade": "39",
+      "telefone": "2246704288",
+      "email": "carlosaguiar@gmail.com",
+      "regiao": "Nordeste"
+    },
+    {
+      "id": 3,
+      "name": "Estevão Munhoz",
+      "genero": "Masculino",
+      "idade": "55",
+      "telefone": "11982462751",
+      "email": "estevaomunhoz@gmail.com",
+      "regiao": "Sudeste"
+    },
+    {
+      "id": 4,
+      "name": "",
+      "idade": "",
+      "telefone": "",
+      "email": "",
+      "cpf": ""
+    }
+  ],
+  "fornecedor": [
+    {
+      "id": 1,
+      "name": "Eduardo Paes",
+      "telefone": 12975638500,
+      "email": "eduardopaes@gmail.com",
+      "endereco": "Rua Arantes Nascimento, MG"
+    },
+    {
+      "id": 2,
+      "name": "Roberto Carvalho",
+      "telefone": 21964276001,
+      "email": "robertocarvalho@gmail.com",
+      "endereco": "Avenida Mogi das Cruzes, RO"
+    },
+    {
+      "id": 3,
+      "name": "Márcio Júnior",
+      "telefone": 11456129801,
+      "email": "marciojunior@gmail.com",
+      "endereco": "Avenida Paulista, SP"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+<div class="container">
+  <div class="row mt-4">
+    <div class="col-8 m-auto">
+      <form [formGroup]="formGroupClient">
+        <div class="mb-2">
+          <div class="display-6 text-center">
+            Cadastro de Cliente
+          </div>
+
+
+          <div class="mb-3">
+            <b>Selecione seu Gênero: </b>
+            <div class="form-check">
+              <input formControlName="genero" class="form-check-input" value="Masculino" type="radio"
+                name="flexRadioDefault" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1" checked>
+                Masculino
+              </label>
+            </div>
+            <div class="form-check">
+              <input formControlName="genero" class="form-check-input" value="Feminino" type="radio"
+                name="flexRadioDefault" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1">
+                Feminino
+              </label>
+            </div>
+            <div class="form-check">
+              <input formControlName="genero" class="form-check-input" value="Outros" type="radio"
+                name="flexRadioDefault" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1">
+                Outros
+              </label>
+            </div>
+            <div class="form-check">
+              <input formControlName="genero" class="form-check-input" value="Prefiro Não Dizer" type="radio"
+                name="flexRadioDefault" id="flexRadioDefault2">
+              <label class="form-check-label" for="flexRadioDefault2">
+                Prefiro não dizer
+              </label>
+            </div>
+
+
+            <label for="name" class="form-label">Nome</label>
+            <input type="text" formControlName="name" class="form-control" id="name"
+              placeholder="Ex: Gabriel Neves Ferraz">
+          </div>
+
+          <div class="mb-2">
+            <label for="idade" class="form-label">Idade</label>
+            <input type="number" formControlName="idade" class="form-control" id="Idade" placeholder="Ex: 33">
+          </div>
+
+          <div class="mb-2">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" formControlName="email" class="form-control" id="Email"
+              placeholder="Ex: gabrielneves@gmail.com">
+          </div>
+
+          <div class="mb-2">
+            <label for="numero" class="form-label">Telefone</label>
+            <input type="number" formControlName="telefone" class="form-control" id="Telefone"
+              placeholder="Ex: (ddd) 12345678">
+          </div>
+
+          <div class="mb-3">
+            <label for="regiao" class="form-label">Região</label>
+            <select formControlName="regiao" class="form-select" id="regiao">
+              <option disabled="true" value="">Selecione sua Região</option>
+              <option value="Norte">Norte</option>
+              <option value="Nordeste">Nordeste</option>
+              <option value="Centro-Oeste">Centro-Oeste</option>
+              <option value="Sul">Sul</option>
+              <option value="Sudeste">Sudeste</option>
+            </select>
+          </div>
+
+          <div class="mb-2 d-flex justify-content-center">
+            <button class="btn btn-primary me-2" (click)="save()">Salvar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="row">
+      <div class="col-10 m-auto">
+        <table class="table table-bordered">
+          <thead class="table-primary ">
+            <tr class="table-active">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Nome</th>
+              <th scope="col">Gênero</th>
+              <th scope="col">Idade</th>
+              <th scope="col">Email</th>
+              <th scope="col">Telefone</th>
+              <th scope="col">Região</th>
+              <th scope="col">Opções</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let Client of Clients">
+              <th scope="row">{{Client.id}}</th>
+              <td>{{Client.name}}</td>
+              <td>{{Client.genero}}</td>
+              <td>{{Client.idade}}</td>
+              <td>{{Client.email}}</td>
+              <td>{{Client.telefone}}</td>
+              <td>{{Client.regiao}}</td>
+              <td>
+                <button class="btn btn-primary me-1" (click)="edit(Client)">Editar</button>
+                <button class="btn btn-primary" (click)="delete(Client)">Excluir</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
